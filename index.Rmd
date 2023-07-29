@@ -1,0 +1,128 @@
+---
+title: "Decomposing temporal changes of biodiversity to loss, survival, and recruitment of individuals: analysis of the North-American avifauna"
+# subtitle: "<br><br>PhD Presentation"
+author: "<br>François Leroy<br>Marta Jarzyna<br>Petr Keil"
+institute: "<br>Czech University of Life Sciences<br>Prague"
+# date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    seal: true ## for the title slide
+    self_contained: true  ## otherwise you need the entire folder to see the slides correctly
+    yolo: false
+    css: ["css_template/middlebury.css", "css_template/tamu-fonts.css"] ## Note that if you don't specify the .css after the file name here, xaringan will import and renew the template at each run in ./libs/remark-css/
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      titleSlideClass: [top, left, inverse]
+bibliograhy: references.bib
+---
+
+```{r, echo=F}
+knitr::opts_chunk$set(message = F, 
+                      warning = F,
+                      echo = F)
+```
+
+# Biodiversity
+
+* Multi-faceted (species richness, turnover, abundance)
+
+* Changes through time
+
+* Perturbed (mostly) by human activities
+
+--
+
+<br>
+
+.center[
+## Abundance
+]
+
+* the best metric to follow biodiversity state 
+
+* overall decline of 69% (*acc.* Living Planet Index)
+
+.center[
+$\Rightarrow$ Marine Sharks and Rays: -71%<br><br>
+$\Rightarrow$ Freshwater: -83%<br><br>
+$\Rightarrow$ -3 billion North-American birds since 70's
+]
+
+---
+
+# Decomposing abundance change
+
+* Temporal change of abundance ( $\Delta N$ ) results of $3$ processes
+
+<br>
+
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/deltaN_concept1.png")
+```
+]
+<br>
+$$\Rightarrow \Delta N = N_{t1} - N_{t0} = R - L$$
+
+---
+
+# Decomposing growth rate
+
+* Growth rate: per individual average change
+
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/deltaN_concept2.png")
+```
+]
+
+.pull-left[
+
+* Loss rate = individual probability of dying/emigrating
+
+* Loss rate $= \frac{L}{N_{t0}}$
+
+]
+
+.pull-right[
+
+* Recruitment rate = individual probability of producing an individual 
+
+* Recruitment rate $= \frac{R}{N_{t0}}$
+
+]
+
+--
+
+.center[
+
+$\Rightarrow$ Growth rate = $\frac{\Delta N}{N_{t0}} = \frac{R}{N_{t0}} - \frac{L}{N_{t0}}$
+
+]
+
+---
+
+class: inverse, center, middle
+
+## Problem
+
+Assessing the ongoing decrease of abundance does not tell us which process is driving the trend
+
+--
+
+### Increase in recruitment?
+Better reproductive success, better breeding habitat...
+
+--
+
+#### Or
+
+### Decrease of individual loss?
+Reduction of threats, better habitat quality...
+
+---
+
+# Data - Breeding Bird Survey (BBS)
