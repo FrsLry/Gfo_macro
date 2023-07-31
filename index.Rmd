@@ -1,8 +1,8 @@
 ---
 title: "Decomposing temporal changes of biodiversity to loss, survival, and recruitment of individuals: analysis of the North-American avifauna"
 # subtitle: "<br><br>PhD Presentation"
-author: "<br>François Leroy<br>Marta Jarzyna<br>Petr Keil"
-institute: "<br>Czech University of Life Sciences<br>Prague"
+author: "<br><br><br><br>François Leroy<br>Marta Jarzyna<br>Petr Keil"
+institute: "<br><br><br><br><br>Czech University of Life Sciences<br>Prague"
 # date: "2016/12/12 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
@@ -57,7 +57,7 @@ $\Rightarrow$ -3 billion North-American birds since 70's
 
 * Temporal change of abundance ( $\Delta N$ ) results of $3$ processes
 
-<br>
+<br><br><br>
 
 .center[
 ```{r, out.width="100%"}
@@ -72,6 +72,8 @@ $$\Rightarrow \Delta N = N_{t1} - N_{t0} = R - L$$
 # Decomposing growth rate
 
 * Growth rate: per individual average change
+
+<br>
 
 .center[
 ```{r, out.width="100%"}
@@ -126,3 +128,219 @@ Reduction of threats, better habitat quality...
 ---
 
 # Data - Breeding Bird Survey (BBS)
+
+.pull-left[
+
+* Structured data on North American avifauna
+
+* From 1987 to 2021
+
+]
+
+.pull-right[
+
+* More than 1000 routes
+
+* 564 species
+
+]
+
+.center[
+
+```{r, out.width="70%"}
+knitr::include_graphics("images/map_routes.jpg")
+```
+
+]
+
+---
+
+# Model - Dail & Madsen
+
+* Bayesian hierarchical model
+
+$$N_{t+1} = Survival_{t+1} + Recruitment_{t+1}$$
+.center[
+
+#### with
+
+]
+
+$$Survival_{t+1} \sim Bin(N_t, \omega)$$
+
+$$Recruitment_{t+1} \sim Poisson(\gamma)$$
+.footnote[
+**Note:** $Loss_t = N_t - S_{t+1}$
+]
+
+--
+
+<br>
+
+* Accounting for detection probabilities, depending on meteorological covariates:
+
+<br>
+
+.center[
+$\Rightarrow$ **Sky condition, wind condition, temperature** & **time of the day**]
+
+---
+
+class: inverse, center, middle
+
+## We assessed
+
+###  1) temporal change of abundance ( $\Delta N$ ), recruitment ( $\Delta R$ ) and loss ( $\Delta L$ ) from 1987 and 2021 all across North America
+
+--
+
+### 2) temporal change of growth rate ( $\Delta N_r$ ), recruitment rate ( $\Delta R_r$ ) and loss rate ( $\Delta L_r$ )
+
+--
+
+### 3) which process, between recruitment (rate) and loss (rate), is driving the temporal change of abundance
+
+---
+
+# Change in abundance, recruitment and loss
+
+--
+
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/map_ab.jpg")
+```
+]
+
+---
+
+# Change in abundance, recruitment and loss
+  
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/map_rec.jpg")
+```
+]
+
+
+---
+
+# Change in abundance, recruitment and loss
+  
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/map_loss.jpg")
+```
+]
+
+---
+
+# Change in abundance, recruitment and loss
+  
+.center[
+```{r, out.width="90%"}
+knitr::include_graphics("images/map_all_number.jpg")
+```
+]
+
+---
+
+# Recruitment vs. Loss
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recVsLoss1.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recVsLoss2.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recVsLoss3.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recVsLoss4.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recVsLoss5.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recVsLoss6.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recVsLoss7.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recVsLoss_ab.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recVsLoss9.png")
+```
+]
+
+---
+
+
+# Recruitment vs. Loss
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recVsLoss_colors.png")
+```
+]
+
