@@ -335,7 +335,6 @@ knitr::include_graphics("images/recVsLoss9.png")
 
 ---
 
-
 # Recruitment vs. Loss
 
 .center[
@@ -343,4 +342,257 @@ knitr::include_graphics("images/recVsLoss9.png")
 knitr::include_graphics("images/recVsLoss_colors.png")
 ```
 ]
+
+---
+
+# Recruitment vs. Loss: BBS routes
+
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/recVsLoss.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss in space
+
+.center[
+
+```{r, out.width="90%"}
+knitr::include_graphics("images/map_recVsLoss.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss in space (smoothened)
+
+.center[
+
+```{r, out.width="90%"}
+knitr::include_graphics("images/map_recVsLoss_gam.png")
+```
+]
+
+---
+
+# Change in growth, recruitment and loss rates
+
+.center[
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/map_gr.png")
+```
+]
+
+---
+
+# Change in growth, recruitment and loss rates
+
+.center[
+
+```{r, out.width="90%"}
+knitr::include_graphics("images/map_recRate.png")
+```
+]
+
+---
+
+# Change in growth, recruitment and loss rates
+
+.center[
+
+```{r, out.width="90%"}
+knitr::include_graphics("images/map_lossRate.png")
+```
+]
+
+---
+
+# Change in growth, recruitment and loss rates
+
+.center[
+
+```{r, out.width="90%"}
+knitr::include_graphics("images/map_rates_all.png")
+```
+]
+
+---
+
+# Recruitment rate vs. Loss rate
+
+.center[
+
+```{r, out.width="75%"}
+knitr::include_graphics("images/recRVsLossR1.png")
+```
+]
+
+---
+
+# Recruitment rate vs. Loss rate
+
+.center[
+
+```{r, out.width="75%"}
+knitr::include_graphics("images/recRVsLossR2.png")
+```
+]
+
+---
+
+# Recruitment rate vs. Loss rate
+
+.center[
+
+```{r, out.width="75%"}
+knitr::include_graphics("images/recRVsLossR3.png")
+```
+]
+
+---
+
+# Recruitment rate vs. Loss rate
+
+.center[
+
+```{r, out.width="75%"}
+knitr::include_graphics("images/recRVsLossR4.png")
+```
+]
+
+---
+
+# Recruitment rate vs. Loss rate
+
+.center[
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/recRVsLossR.png")
+```
+]
+
+---
+
+# Recruitment rate vs. Loss rate in space
+
+.center[
+
+```{r, out.width="90%"}
+knitr::include_graphics("images/map_recRVsLossR.png")
+```
+]
+
+---
+
+# Recruitment rate vs. Loss rate (smoothened)
+
+.center[
+
+```{r, out.width="90%"}
+knitr::include_graphics("images/map_recRVsLossR_gam.png")
+```
+]
+
+---
+
+# Species' preferred habitat - Numbers
+
+<br><br>
+
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/barplots_number.png")
+```
+]
+
+---
+
+# Species' preferred habitat - Rates
+
+<br><br>
+
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/barplots_rate.png")
+```
+]
+
+---
+
+# Conclusion
+
+
+.pull-left[
+
+<br>
+
+* At the community level: decrease in the number of extinction and recruitment drive abundance change
+
+]
+
+
+.pull-right[
+```{r, out.width="100%"}
+knitr::include_graphics("images/recVsLoss.png")
+```
+
+]
+
+--
+
+.pull-left[
+
+**In fact:**
+
+<br>
+
+* At the individual level: increase in recruitment and extinction rate are driving the population dynamic 
+
+
+]
+
+.pull-right[
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/recRVsLossR.png")
+```
+
+]
+
+---
+
+# Conclusion 
+
+$\Rightarrow$ From a conservation perspective, working at the individual level is the most important
+
+<br>
+
+$\Rightarrow$ Focus must be done on bending the loss rate curve (*e.g.* habitat loss, fragmentation, predation by domestic animals...)
+
+.center[
+
+```{r, out.width="60%"}
+knitr::include_graphics("images/recRVsLossR.png")
+```
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Thank you for your attention
+
+
+<br><br><br>
+`r icons::icon_style(icons::fontawesome$regular$envelope, scale = 1, fill = "white")` leroy@fzp.czu.cz
+
+`r icons::icon_style(icons::fontawesome$brands$twitter, scale = 2, fill = "lightblue")` @FrsLry
+
+`r icons::icon_style(icons::fontawesome$brands$github, scale = 2, fill = "white")` FrsLry
+
+`r icons::icon_style(icons::fontawesome$solid$"mouse-pointer", scale = 1, fill = "white")` https://frslry.github.io/
 
