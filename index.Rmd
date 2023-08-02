@@ -25,25 +25,23 @@ knitr::opts_chunk$set(message = F,
                       echo = F)
 ```
 
-# Biodiversity
+# Temporal change of biodiversity
 
-* Multi-faceted (species richness, turnover, abundance)
+* Multi-faceted phenomenon (species richness, turnover, abundance)
 
 * Changes through time
 
-* Perturbed (mostly) by human activities
+* Perturbed by human activities
 
 --
-
-<br>
 
 .center[
 ## Abundance
 ]
 
-* the best metric to follow biodiversity state 
+* sensitive indicator of biodiversity state 
 
-* overall decline of 69% (*acc.* Living Planet Index)
+* average decline of relative abundance $\rightarrow$ 69% (*acc.* Living Planet Index)
 
 .center[
 $\Rightarrow$ Marine Sharks and Rays: -71%<br><br>
@@ -57,51 +55,50 @@ $\Rightarrow$ -3 billion North-American birds since 70's
 
 * Temporal change of abundance ( $\Delta N$ ) results of $3$ processes
 
-<br><br><br>
+<br>
 
 .center[
 ```{r, out.width="100%"}
 knitr::include_graphics("images/deltaN_concept1.png")
 ```
 ]
+
+--
+
 <br>
 $$\Rightarrow \Delta N = N_{t1} - N_{t0} = R - L$$
+<br>
+
+$$\Rightarrow \Delta^2N = \Delta R - \Delta L$$
 
 ---
 
 # Decomposing growth rate
 
-* Growth rate: per individual average change
+* Growth rate: per individual average change 
 
 <br>
 
-.center[
-```{r, out.width="100%"}
-knitr::include_graphics("images/deltaN_concept2.png")
-```
-]
+$$\Rightarrow \frac{\Delta N}{N_{t0}} = \frac{R}{N_{t0}} - \frac{L}{N_{t0}}$$
+
+--
+
+<br><br>
 
 .pull-left[
 
-* Loss rate = individual probability of dying/emigrating
+* Recruitment rate $= \frac{R}{N_{t0}}$
 
-* Loss rate $= \frac{L}{N_{t0}}$
+* Recruitment rate = individual probability of producing an individual
 
 ]
 
 .pull-right[
 
-* Recruitment rate = individual probability of producing an individual 
 
-* Recruitment rate $= \frac{R}{N_{t0}}$
+* Loss rate $= \frac{L}{N_{t0}}$
 
-]
-
---
-
-.center[
-
-$\Rightarrow$ Growth rate = $\frac{\Delta N}{N_{t0}} = \frac{R}{N_{t0}} - \frac{L}{N_{t0}}$
+* Loss rate = individual probability of dying/emigrating
 
 ]
 
@@ -111,19 +108,39 @@ class: inverse, center, middle
 
 ## Problem
 
-Assessing the ongoing decrease of abundance does not tell us which process is driving the trend
+$\Rightarrow$ Assessing the ongoing decrease of abundance does not tell us how loss and recruitment change through time
 
 --
 
-### Increase in recruitment?
-Better reproductive success, better breeding habitat...
+$\Rightarrow$ Decrease in recruitment $\neq$ Increase in loss, but they both result in an acceleration of the decrease of abundance
 
 --
 
-#### Or
+<br><br>
 
-### Decrease of individual loss?
-Reduction of threats, better habitat quality...
+### From a conservation perspective
+
+$\rightarrow$ measures to "bend the curve" of recruitment (*e.g.* working on reproductive sucess, protecting breeding habitat)
+
+$$\neq$$
+
+$\rightarrow$ measures to "bend the curve" of loss (*e.g.* reduction of threats, increasing habitat quality)
+
+---
+
+class: inverse, center, middle
+
+## For North-American avifauna, we assessed:
+
+###  1) temporal change of abundance, recruitment and loss from 1987 and 2021 
+
+--
+
+### 2) temporal change of growth rate, recruitment rate and loss rate
+
+--
+
+### 3) which process (recruitment or loss) is driving temporal change of biodiversity
 
 ---
 
@@ -157,7 +174,15 @@ knitr::include_graphics("images/map_routes.jpg")
 
 # Model - Dail & Madsen
 
-* Bayesian hierarchical model
+.pull-left[
+* Stacked hierarchical model
+]
+
+<br>
+
+.pull-right[
+* Bayesian framework
+]
 
 $$N_{t+1} = Survival_{t+1} + Recruitment_{t+1}$$
 .center[
@@ -175,30 +200,46 @@ $$Recruitment_{t+1} \sim Poisson(\gamma)$$
 
 --
 
-<br>
 
 * Accounting for detection probabilities, depending on meteorological covariates:
 
-<br>
+$$N^*{_t} \sim Bin(N_t, p)$$
 
 .center[
-$\Rightarrow$ **Sky condition, wind condition, temperature** & **time of the day**]
+
+$\Rightarrow$ **Sky condition, wind condition, temperature** & **time of the day**
+]
 
 ---
 
-class: inverse, center, middle
+# Model - Dail & Madsen
 
-## We assessed
+* 1 MCMC chain (= 1 core) with 100 000 iterations $\sim$ **2 days**
 
-###  1) temporal change of abundance ( $\Delta N$ ), recruitment ( $\Delta R$ ) and loss ( $\Delta L$ ) from 1987 and 2021 all across North America
+* 3 chains per species $\times$ 564 species $\Rightarrow$ **1692 MCMC chains**
+
+<br><br>
+
+.center[
+$\Rightarrow$ **9.3 years** to fit the model using 1 core ( $\sim$ 1 year using 8 cores)
+]
 
 --
 
-### 2) temporal change of growth rate ( $\Delta N_r$ ), recruitment rate ( $\Delta R_r$ ) and loss rate ( $\Delta L_r$ )
+<br><br>
 
---
+.center[
+$\Rightarrow$ Ohio SuperComputer to parallelize the learning on **1692 cores**
 
-### 3) which process, between recruitment (rate) and loss (rate), is driving the temporal change of abundance
+<br>
+
+```{r}
+knitr::include_graphics("images/OSC_logo.png")
+```
+
+
+]
+
 
 ---
 
@@ -527,15 +568,13 @@ knitr::include_graphics("images/barplots_rate.png")
 
 .pull-left[
 
-<br>
-
-* At the community level: decrease in the number of extinction and recruitment drive abundance change
+* At the **community level**: decrease in the number of extinction and recruitment drive biodiversity change
 
 ]
 
 
 .pull-right[
-```{r, out.width="100%"}
+```{r, out.width="95%"}
 knitr::include_graphics("images/recVsLoss.png")
 ```
 
@@ -549,14 +588,14 @@ knitr::include_graphics("images/recVsLoss.png")
 
 <br>
 
-* At the individual level: increase in recruitment and extinction rate are driving the population dynamic 
+* At the **individual level**: increase in recruitment and extinction rate are driving the population dynamic 
 
 
 ]
 
 .pull-right[
 
-```{r, out.width="100%"}
+```{r, out.width="95%"}
 knitr::include_graphics("images/recRVsLossR.png")
 ```
 
@@ -595,4 +634,70 @@ class: inverse, center, middle
 `r icons::icon_style(icons::fontawesome$brands$github, scale = 2, fill = "white")` FrsLry
 
 `r icons::icon_style(icons::fontawesome$solid$"mouse-pointer", scale = 1, fill = "white")` https://frslry.github.io/
+
+---
+
+# Per species change - Abundance
+
+```{r}
+knitr::include_graphics("images/perSpecies_ab.png")
+```
+
+---
+
+# Per species change - Recruitment
+
+```{r}
+knitr::include_graphics("images/perSpecies_rec.png")
+```
+
+---
+
+# Per species change - Loss
+
+```{r}
+knitr::include_graphics("images/perSpecies_loss.png")
+```
+
+---
+
+# Per species change - Growth rate
+
+```{r}
+knitr::include_graphics("images/perSpecies_gr.png")
+```
+
+---
+
+# Per species change - Recruitment rate
+
+```{r}
+knitr::include_graphics("images/perSpecies_recR.png")
+```
+
+---
+
+# Per species change - Loss rate
+
+```{r}
+knitr::include_graphics("images/perSpecies_lossR.png")
+```
+
+---
+
+# Rec. vs. Loss colored by ab. trend
+
+```{r}
+knitr::include_graphics("images/rec_vs_loss_colored.png")
+```
+
+---
+
+
+# Rec. rate vs. Loss rate colored by growth rate
+
+```{r}
+knitr::include_graphics("images/recR_vs_lossR_colored.png")
+```
+
 
