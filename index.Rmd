@@ -178,11 +178,12 @@ knitr::include_graphics("images/map_routes.jpg")
 * Stacked hierarchical model
 ]
 
-<br>
-
 .pull-right[
 * Bayesian framework
 ]
+
+
+<br>
 
 $$N_{t+1} = Survival_{t+1} + Recruitment_{t+1}$$
 .center[
