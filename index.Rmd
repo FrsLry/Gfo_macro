@@ -1,8 +1,8 @@
 ---
 title: "Decomposing temporal changes of biodiversity to loss, survival, and recruitment of individuals: analysis of the North-American avifauna"
 # subtitle: "<br><br>PhD Presentation"
-author: "<br><br><br><br>François Leroy<br>Marta Jarzyna<br>Petr Keil"
-institute: "<br><br><br><br><br>Czech University of Life Sciences<br>Prague"
+author: "<br>François Leroy<br>Marta Jarzyna<br>Petr Keil<br><br><br><br>"
+institute: "<br><br><br>Czech University of Life Sciences,<br>Prague<br><br>Ohio State University"
 # date: "2016/12/12 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
@@ -25,35 +25,37 @@ knitr::opts_chunk$set(message = F,
                       echo = F)
 ```
 
-# Temporal change of biodiversity
+# Temporal change of abundance
 
-* Multi-faceted phenomenon (species richness, turnover, abundance)
-
-* Changes through time
+* Sensitive indicator of biodiversity state 
 
 * Perturbed by human activities
 
---
+* Average decline of relative abundance $\rightarrow$ 69% (*acc.* Living Planet Index)
 
 .center[
-## Abundance
+$\Rightarrow$ -3 billion North-American birds since 70's
 ]
 
-* sensitive indicator of biodiversity state 
+.pull-left[
+```{r, out.width="75%"}
+knitr::include_graphics("images/Rosenberg_Fig1.JPG")
+```
 
-* average decline of relative abundance $\rightarrow$ 69% (*acc.* Living Planet Index)
+]
 
-.center[
-$\Rightarrow$ Marine Sharks and Rays: -71%<br><br>
-$\Rightarrow$ Freshwater: -83%<br><br>
-$\Rightarrow$ -3 billion North-American birds since 70's
+.pull-right[
+
+<br><br>
+
+```{r, out.width="150%"}
+knitr::include_graphics("images/Rosenberg_Fig2.png")
+```
 ]
 
 ---
 
 # Decomposing abundance change
-
-* Temporal change of abundance ( $\Delta N$ ) results of $3$ processes
 
 <br>
 
@@ -66,39 +68,43 @@ knitr::include_graphics("images/deltaN_concept1.png")
 --
 
 <br>
-$$\Rightarrow \Delta N = N_{t1} - N_{t0} = R - L$$
+**Abundance change:**    
+$$\Delta N = N_{t1} - N_{t0} = R - L$$
 <br>
 
-$$\Rightarrow \Delta^2N = \Delta R - \Delta L$$
+$$\Leftrightarrow \Delta^2N = \Delta R - \Delta L$$
 
 ---
 
 # Decomposing growth rate
 
-* Growth rate: per individual average change 
+* **Growth rate:** per individual average change 
 
 <br>
 
-$$\Rightarrow \frac{\Delta N}{N_{t0}} = \frac{R}{N_{t0}} - \frac{L}{N_{t0}}$$
-
+$$\frac{\Delta N}{N_{t0}} = \frac{R}{N_{t0}} - \frac{L}{N_{t0}}$$
+<!-- $$\Leftrightarrow \Delta Gr = \Delta (\frac{R}{N_{t0}}) - \Delta (\frac{L}{N_{t0}})$$ -->
 --
 
 <br><br>
 
 .pull-left[
 
-* Recruitment rate $= \frac{R}{N_{t0}}$
+$$\big\Downarrow$$
 
-* Recruitment rate = individual probability of producing an individual
+* **Recruitment rate** = individual probability of producing an individual
+
+$$\frac{R}{N_{t0}}$$
 
 ]
 
 .pull-right[
 
+$$\big\Downarrow$$
 
-* Loss rate $= \frac{L}{N_{t0}}$
+* **Loss rate** = individual probability of dying/emigrating
 
-* Loss rate = individual probability of dying/emigrating
+$$\frac{L}{N_{t0}}$$
 
 ]
 
@@ -175,15 +181,13 @@ knitr::include_graphics("images/map_routes.jpg")
 # Model - Dail & Madsen
 
 .pull-left[
-* Stacked hierarchical model
+* **Assess survival and recruitment from abundance data**
 ]
 
 .pull-right[
-* Bayesian framework
+* Bayesian stacked hierarchical model
 ]
 
-
-<br>
 
 $$N_{t+1} = Survival_{t+1} + Recruitment_{t+1}$$
 .center[
@@ -195,10 +199,8 @@ $$N_{t+1} = Survival_{t+1} + Recruitment_{t+1}$$
 $$Survival_{t+1} \sim Bin(N_t, \omega)$$
 
 $$Recruitment_{t+1} \sim Poisson(\gamma)$$
-.footnote[
-**Note:** $Loss_t = N_t - S_{t+1}$
-]
 
+$$Loss_t = N_t - S_{t+1}$$
 --
 
 
@@ -215,24 +217,31 @@ $\Rightarrow$ **Sky condition, wind condition, temperature** & **time of the day
 
 # Model - Dail & Madsen
 
-* 1 MCMC chain (= 1 core) with 100 000 iterations $\sim$ **2 days**
+<!-- * 1 MCMC chain (= 1 core) with 100 000 iterations $\sim$ **2 days** -->
 
-* 3 chains per species $\times$ 564 species $\Rightarrow$ **1692 MCMC chains**
-
-<br><br>
+* 3 MCMC chains per species $\times$ 564 species $=$ **1692 MCMC chains**
 
 .center[
 $\Rightarrow$ **9.3 years** to fit the model using 1 core ( $\sim$ 1 year using 8 cores)
 ]
 
---
+.pull-left[
+.center[
+**Marta Jarzyna**
 
+```{r, out.width="30%"}
+knitr::include_graphics("images/jarzyna.1.jpg")
+```
+]
+]
+
+.pull-right[
 <br><br>
+* Ohio State University
+]
 
 .center[
-$\Rightarrow$ Ohio SuperComputer to parallelize the learning on **1692 cores**
-
-<br>
+$\Rightarrow$ Ohio SuperComputer to **parallelize** the learning on **1692 cores**
 
 ```{r}
 knitr::include_graphics("images/OSC_logo.png")
@@ -244,10 +253,11 @@ knitr::include_graphics("images/OSC_logo.png")
 
 ---
 
-# Change in abundance, recruitment and loss
+# Trend in abundance
 
 --
 
+<br>
 .center[
 ```{r, out.width="100%"}
 knitr::include_graphics("images/map_ab.jpg")
@@ -624,17 +634,41 @@ knitr::include_graphics("images/recRVsLossR.png")
 
 class: inverse, center, middle
 
-# Thank you for your attention
+# Ackowledgements
 
-
-<br><br><br>
+.pull-left[
 `r icons::icon_style(icons::fontawesome$regular$envelope, scale = 1, fill = "white")` leroy@fzp.czu.cz
 
+.center[
+### Marta Jarzyna
+
+```{r, out.width="30%"}
+knitr::include_graphics("images/jarzyna.1.jpg")
+```
+]
+
+]
+
+.pull-right[
 `r icons::icon_style(icons::fontawesome$brands$twitter, scale = 2, fill = "lightblue")` @FrsLry
 
-`r icons::icon_style(icons::fontawesome$brands$github, scale = 2, fill = "white")` FrsLry
+.center[
+### Petr Keil
 
-`r icons::icon_style(icons::fontawesome$solid$"mouse-pointer", scale = 1, fill = "white")` https://frslry.github.io/
+```{r, out.width="33%"}
+knitr::include_graphics("images/petr_keil.jpg")
+```
+]
+]
+
+.center[
+
+```{r}
+knitr::include_graphics("images/ERC.JPG")
+```
+
+
+]
 
 ---
 

@@ -132,9 +132,9 @@ tr:nth-child(even) { background: #eee }
 
 /* Add image and change bg color */
 .title-slide {
-  background-image: url(../images/czu_logo.jpg), url(../images/cover.jfif);
-  background-position: 48px 96%, 80% 90%;
-  background-size: 100px, 50%;
+  background-image: url(../images/czu_logo.jpg), url(../images/cover.jfif), url(../images/ohio_su_logo.jpg);
+  background-position: 48px 96%, 80% 90%, 200px 97%;
+  background-size: 100px, 50%, 100px;
   background-color: #fff;
   padding-left: 100px;  /* delete this for 4:3 aspect ratio */
 }
