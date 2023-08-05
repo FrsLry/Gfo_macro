@@ -294,138 +294,6 @@ knitr::include_graphics("images/map_all_number.jpg")
 
 ---
 
-# Recruitment vs. Loss
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recVsLoss1.png")
-```
-]
-
----
-
-# Recruitment vs. Loss
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recVsLoss2.png")
-```
-]
-
----
-
-# Recruitment vs. Loss
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recVsLoss3.png")
-```
-]
-
----
-
-# Recruitment vs. Loss
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recVsLoss4.png")
-```
-]
-
----
-
-# Recruitment vs. Loss
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recVsLoss5.png")
-```
-]
-
----
-
-# Recruitment vs. Loss
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recVsLoss6.png")
-```
-]
-
----
-
-# Recruitment vs. Loss
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recVsLoss7.png")
-```
-]
-
----
-
-# Recruitment vs. Loss
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recVsLoss_ab.png")
-```
-]
-
----
-
-# Recruitment vs. Loss
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recVsLoss9.png")
-```
-]
-
----
-
-# Recruitment vs. Loss
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recVsLoss_colors.png")
-```
-]
-
----
-
-# Recruitment vs. Loss: BBS routes
-
-.center[
-```{r, out.width="100%"}
-knitr::include_graphics("images/recVsLoss.png")
-```
-]
-
----
-
-# Recruitment vs. Loss in space
-
-.center[
-
-```{r, out.width="90%"}
-knitr::include_graphics("images/map_recVsLoss.png")
-```
-]
-
----
-
-# Recruitment vs. Loss in space (smoothened)
-
-.center[
-
-```{r, out.width="90%"}
-knitr::include_graphics("images/map_recVsLoss_gam.png")
-```
-]
-
----
-
 # Trend in growth rate
 
 .center[
@@ -470,10 +338,9 @@ knitr::include_graphics("images/map_rates_all.png")
 
 ---
 
-# Recruitment rate vs. Loss rate
+# Recruitment vs. Loss rates
 
 .center[
-
 ```{r, out.width="75%"}
 knitr::include_graphics("images/recRVsLossR1.png")
 ```
@@ -481,10 +348,9 @@ knitr::include_graphics("images/recRVsLossR1.png")
 
 ---
 
-# Recruitment rate vs. Loss rate
+# Recruitment vs. Loss rates
 
 .center[
-
 ```{r, out.width="75%"}
 knitr::include_graphics("images/recRVsLossR2.png")
 ```
@@ -492,10 +358,9 @@ knitr::include_graphics("images/recRVsLossR2.png")
 
 ---
 
-# Recruitment rate vs. Loss rate
+# Recruitment vs. Loss rates
 
 .center[
-
 ```{r, out.width="75%"}
 knitr::include_graphics("images/recRVsLossR3.png")
 ```
@@ -503,12 +368,61 @@ knitr::include_graphics("images/recRVsLossR3.png")
 
 ---
 
-# Recruitment rate vs. Loss rate
+# Recruitment vs. Loss rates
 
 .center[
-
 ```{r, out.width="75%"}
 knitr::include_graphics("images/recRVsLossR4.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss rates
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recRVsLossR5.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss rates
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recRVsLossR6.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss rates
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recRVsLossR7.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss rates
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recRVsLossR8.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss rates
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recRVsLossR9.png")
 ```
 ]
 
@@ -578,34 +492,27 @@ knitr::include_graphics("images/barplots_rate.png")
 
 * At the **community level**: decrease in the number of extinction and recruitment drive biodiversity change
 
-]
-
-
-.pull-right[
-```{r, out.width="95%"}
-knitr::include_graphics("images/recVsLoss.png")
-```
-
-]
-
---
-
-.pull-left[
-
-**In fact:**
-
-<br>
-
-* At the **individual level**: increase in recruitment and extinction rate are driving the population dynamic 
-
-
-]
-
-.pull-right[
-
 ```{r, out.width="95%"}
 knitr::include_graphics("images/recRVsLossR.png")
 ```
+
+]
+
+
+.pull-right[
+* At the **individual level**: increase in recruitment and extinction rate are driving the population dynamic
+
+```{r, out.width="95%"}
+knitr::include_graphics("images/map_recRVsLossR_gam.png")
+```
+
+]
+
+
+
+.pull-right[
+
+
 
 ]
 
