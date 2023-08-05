@@ -255,9 +255,6 @@ knitr::include_graphics("images/OSC_logo.png")
 
 # Trend in abundance
 
---
-
-<br>
 .center[
 ```{r, out.width="100%"}
 knitr::include_graphics("images/map_ab.jpg")
@@ -266,7 +263,7 @@ knitr::include_graphics("images/map_ab.jpg")
 
 ---
 
-# Change in abundance, recruitment and loss
+# Trend in recruitment
   
 .center[
 ```{r, out.width="100%"}
@@ -277,7 +274,7 @@ knitr::include_graphics("images/map_rec.jpg")
 
 ---
 
-# Change in abundance, recruitment and loss
+# Trend in loss
   
 .center[
 ```{r, out.width="100%"}
@@ -287,7 +284,7 @@ knitr::include_graphics("images/map_loss.jpg")
 
 ---
 
-# Change in abundance, recruitment and loss
+# Trends in abundance, recruitment and loss
   
 .center[
 ```{r, out.width="90%"}
@@ -429,7 +426,7 @@ knitr::include_graphics("images/map_recVsLoss_gam.png")
 
 ---
 
-# Change in growth, recruitment and loss rates
+# Trend in growth rate
 
 .center[
 
@@ -440,7 +437,7 @@ knitr::include_graphics("images/map_gr.png")
 
 ---
 
-# Change in growth, recruitment and loss rates
+# Trend in recruitment rate
 
 .center[
 
@@ -451,7 +448,7 @@ knitr::include_graphics("images/map_recRate.png")
 
 ---
 
-# Change in growth, recruitment and loss rates
+# Trend in loss rate
 
 .center[
 
@@ -462,7 +459,7 @@ knitr::include_graphics("images/map_lossRate.png")
 
 ---
 
-# Change in growth, recruitment and loss rates
+# Trends in growth, recruitment and loss rates
 
 .center[
 
