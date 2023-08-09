@@ -1,5 +1,5 @@
 ---
-title: "Decomposing temporal changes of biodiversity to loss, survival, and recruitment of individuals: analysis of the North-American avifauna"
+title: "Decomposing abundance change to recruitment and loss: analysis of the North-American avifauna"
 # subtitle: "<br><br>PhD Presentation"
 author: "<br>François Leroy<br>Marta Jarzyna<br>Petr Keil<br><br><br><br>"
 institute: "<br><br><br>Czech University of Life Sciences,<br>Prague<br><br>Ohio State University"
@@ -31,7 +31,7 @@ knitr::opts_chunk$set(message = F,
 
 * Perturbed by human activities
 
-* Average decline of relative abundance $\rightarrow$ 69% (*acc.* Living Planet Index)
+* Average decline of relative abundance $\rightarrow$ 69% (Living Planet Index)
 
 .center[
 $\Rightarrow$ -3 billion North-American birds since 70's
@@ -51,7 +51,13 @@ knitr::include_graphics("images/Rosenberg_Fig1.JPG")
 ```{r, out.width="150%"}
 knitr::include_graphics("images/Rosenberg_Fig2.png")
 ```
+
+.footnote[
+Rosenberg *et al.*, 2019
 ]
+
+]
+
 
 ---
 
@@ -78,7 +84,7 @@ $$\Leftrightarrow \Delta^2N = \Delta R - \Delta L$$
 
 # Decomposing growth rate
 
-* **Growth rate:** per individual average change 
+* **Growth rate:** per individual average change in population
 
 <br>
 
@@ -92,7 +98,7 @@ $$\frac{\Delta N}{N_{t0}} = \frac{R}{N_{t0}} - \frac{L}{N_{t0}}$$
 
 $$\big\Downarrow$$
 
-* **Recruitment rate** = individual probability of producing an individual
+* **Recruitment rate** = individual addition of individuals
 
 $$\frac{R}{N_{t0}}$$
 
@@ -428,6 +434,16 @@ knitr::include_graphics("images/recRVsLossR9.png")
 
 ---
 
+# Recruitment vs. Loss rates
+
+.center[
+```{r, out.width="75%"}
+knitr::include_graphics("images/recRVsLossR100.png")
+```
+]
+
+---
+
 # Recruitment rate vs. Loss rate
 
 .center[
@@ -439,16 +455,16 @@ knitr::include_graphics("images/recRVsLossR.png")
 
 ---
 
-# Recruitment rate vs. Loss rate in space
+<!-- # Recruitment rate vs. Loss rate in space -->
 
-.center[
+<!-- .center[ -->
 
-```{r, out.width="90%"}
-knitr::include_graphics("images/map_recRVsLossR.png")
-```
-]
+<!-- ```{r, out.width="90%"} -->
+<!-- knitr::include_graphics("images/map_recRVsLossR.png") -->
+<!-- ``` -->
+<!-- ] -->
 
----
+<!-- --- -->
 
 # Recruitment rate vs. Loss rate (smoothened)
 
