@@ -152,7 +152,7 @@ class: inverse, center, middle
 
 --
 
-### 3) which process (recruitment or loss) is driving temporal change of biodiversity
+### 3) which process (recruitment or loss) is driving temporal change of abundance
 
 ---
 
@@ -260,6 +260,8 @@ knitr::include_graphics("images/OSC_logo.png")
 ---
 
 # Trend in abundance
+
+--
 
 .center[
 ```{r, out.width="100%"}
@@ -418,6 +420,16 @@ knitr::include_graphics("images/recRVsLossR7.png")
 
 .center[
 ```{r, out.width="75%"}
+knitr::include_graphics("images/recRVsLossR100.png")
+```
+]
+
+---
+
+# Recruitment vs. Loss rates
+
+.center[
+```{r, out.width="75%"}
 knitr::include_graphics("images/recRVsLossR8.png")
 ```
 ]
@@ -427,18 +439,9 @@ knitr::include_graphics("images/recRVsLossR8.png")
 # Recruitment vs. Loss rates
 
 .center[
+
 ```{r, out.width="75%"}
 knitr::include_graphics("images/recRVsLossR9.png")
-```
-]
-
----
-
-# Recruitment vs. Loss rates
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recRVsLossR100.png")
 ```
 ]
 
@@ -494,11 +497,11 @@ knitr::include_graphics("images/barplots_rate.png")
 
 .center[
 
-* First time decomposing changes of abundance at continental and macroecological scale
+$\Rightarrow$ First time decomposing changes of abundance at this continental and macroecological scale
 
-* Mapping the causes of abundance dynamic
+<br>
 
-* At the **individual level**: increase in recruitment and extinction rate are driving the population dynamic
+$\Rightarrow$ Mapping the ecological processes responsible for population change
 
 ]
 
@@ -519,28 +522,33 @@ knitr::include_graphics("images/map_recRVsLossR_gam.png")
 
 ]
 
-
-
-.pull-right[
-
-
-
-]
-
 ---
 
 # Conclusion 
+
+.center[
 
 $\Rightarrow$ From a conservation perspective, working at the individual level is the most important
 
 <br>
 
-$\Rightarrow$ Focus must be done on bending the loss rate curve (*e.g.* habitat loss, fragmentation, predation by domestic animals...)
+$\Rightarrow$ Focus must be done on bending the "right curve" (*i.e.* loss or recruitment rate)
 
-.center[
+]
 
-```{r, out.width="60%"}
+.pull-left[
+
+```{r, out.width="95%"}
 knitr::include_graphics("images/recRVsLossR.png")
+```
+
+]
+
+
+.pull-right[
+
+```{r, out.width="95%"}
+knitr::include_graphics("images/map_recRVsLossR_gam.png")
 ```
 
 ]
