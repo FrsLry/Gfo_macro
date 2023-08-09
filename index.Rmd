@@ -1,7 +1,7 @@
 ---
 title: "Decomposing abundance change to recruitment and loss: analysis of the North-American avifauna"
 # subtitle: "<br><br>PhD Presentation"
-author: "<br>François Leroy<br>Marta Jarzyna<br>Petr Keil<br><br><br><br>"
+author: "<br><br>François Leroy<br>Marta Jarzyna<br>Petr Keil<br><br><br><br>"
 institute: "<br><br><br>Czech University of Life Sciences,<br>Prague<br><br>Ohio State University"
 # date: "2016/12/12 (updated: `r Sys.Date()`)"
 output:
@@ -455,17 +455,6 @@ knitr::include_graphics("images/recRVsLossR.png")
 
 ---
 
-<!-- # Recruitment rate vs. Loss rate in space -->
-
-<!-- .center[ -->
-
-<!-- ```{r, out.width="90%"} -->
-<!-- knitr::include_graphics("images/map_recRVsLossR.png") -->
-<!-- ``` -->
-<!-- ] -->
-
-<!-- --- -->
-
 # Recruitment rate vs. Loss rate (smoothened)
 
 .center[
@@ -503,10 +492,17 @@ knitr::include_graphics("images/barplots_rate.png")
 
 # Conclusion
 
+.center[
+
+* First time decomposing changes of abundance at continental and macroecological scale
+
+* Mapping the causes of abundance dynamic
+
+* At the **individual level**: increase in recruitment and extinction rate are driving the population dynamic
+
+]
 
 .pull-left[
-
-* At the **community level**: decrease in the number of extinction and recruitment drive biodiversity change
 
 ```{r, out.width="95%"}
 knitr::include_graphics("images/recRVsLossR.png")
@@ -516,7 +512,6 @@ knitr::include_graphics("images/recRVsLossR.png")
 
 
 .pull-right[
-* At the **individual level**: increase in recruitment and extinction rate are driving the population dynamic
 
 ```{r, out.width="95%"}
 knitr::include_graphics("images/map_recRVsLossR_gam.png")
@@ -656,3 +651,13 @@ knitr::include_graphics("images/recR_vs_lossR_colored.png")
 ```
 
 
+---
+
+# Recruitment rate vs. Loss rate in space
+
+.center[
+
+```{r, out.width="90%"}
+knitr::include_graphics("images/map_recRVsLossR.png")
+```
+]
