@@ -210,7 +210,7 @@ $$Loss_t = N_t - S_{t+1}$$
 --
 
 
-* Accounting for detection probabilities, depending on meteorological covariates:
+* Accounting for detection probabilities, depending on weather:
 
 $$N^*{_t} \sim Bin(N_t, p)$$
 
@@ -271,7 +271,7 @@ knitr::include_graphics("images/map_ab.jpg")
 
 ---
 
-# Trend in recruitment
+# Trend in number of recruited individuals
   
 .center[
 ```{r, out.width="100%"}
@@ -282,7 +282,7 @@ knitr::include_graphics("images/map_rec.jpg")
 
 ---
 
-# Trend in loss
+# Trend in number of lost individuals
   
 .center[
 ```{r, out.width="100%"}
@@ -469,30 +469,6 @@ knitr::include_graphics("images/map_recRVsLossR_gam.png")
 
 ---
 
-# Species' preferred habitat - Numbers
-
-<br><br>
-
-.center[
-```{r, out.width="100%"}
-knitr::include_graphics("images/barplots_number.png")
-```
-]
-
----
-
-# Species' preferred habitat - Rates
-
-<br><br>
-
-.center[
-```{r, out.width="100%"}
-knitr::include_graphics("images/barplots_rate.png")
-```
-]
-
----
-
 # Conclusion
 
 .center[
@@ -667,5 +643,29 @@ knitr::include_graphics("images/recR_vs_lossR_colored.png")
 
 ```{r, out.width="90%"}
 knitr::include_graphics("images/map_recRVsLossR.png")
+```
+]
+
+---
+
+# Species' preferred habitat - Numbers
+
+<br><br>
+
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/barplots_number.png")
+```
+]
+
+---
+
+# Species' preferred habitat - Rates
+
+<br><br>
+
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/barplots_rate.png")
 ```
 ]
