@@ -1,9 +1,9 @@
 ---
-title: "Decomposing abundance change to recruitment and loss: analysis of the North-American avifauna"
+title: "Acceleration and demographic rates of bird abundance decline in North America"
 # subtitle: "<br><br>PhD Presentation"
-author: "<br><br>François Leroy<br>Marta Jarzyna<br>Petr Keil<br><br><br><br>"
+author: "<br><br>François Leroy (he/him)<br>Marta Jarzyna<br>Petr Keil<br><br><br><br>"
+date: "`r Sys.Date()`"
 institute: "<br><br><br>Czech University of Life Sciences,<br>Prague<br><br>Ohio State University"
-# date: "2016/12/12 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     seal: true ## for the title slide
@@ -25,92 +25,221 @@ knitr::opts_chunk$set(message = F,
                       echo = F)
 ```
 
-# Temporal change of abundance
+class: inverse, center, middle
 
-* Sensitive indicator of biodiversity state 
-
-* Perturbed by human activities
-
-* Average decline of relative abundance $\rightarrow$ 69% (Living Planet Index)
+# Ackowledgements
 
 .center[
-$\Rightarrow$ -3 billion North-American birds since 70's
+
+```{r, out.width="50%"}
+knitr::include_graphics("images/ERC.JPG")
+```
+
 ]
 
 .pull-left[
+
+.center[
+
+### Petr Keil
+
+```{r, out.width="45%"}
+knitr::include_graphics("images/petr_keil.jpg")
+```
+
+
+```{r, out.width="80%"}
+knitr::include_graphics("images/mobi-lab-logo-white-rgb.png")
+```
+
+
+]
+
+]
+
+.pull-right[
+
+.center[
+
+### Marta Jarzyna
+
+```{r, out.width="35%"}
+knitr::include_graphics("images/jarzyna.1.jpg")
+```
+
+<br>
+
 ```{r, out.width="75%"}
+knitr::include_graphics("images/JarzynaLab-Logo_Horizontal-Color.png")
+```
+
+]
+
+]
+
+---
+
+# The Great Acceleration
+
+* Since the 50's human population and activities have not only linearly increased, but exponentially increased (i.e. acceleration)
+
+* Exponential growth of GDP is **coupled** with an exponential impact on ecosystems through intensive agriculture, deforestation, transportation, urbanization...
+
+* Exponential growth of GDP is the aim of every national economy
+
+.pull-left[
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/steffen2015.png")
+```
+
+]
+
+.pull-right[
+
+```{r, out.width="100%"}
+knitr::include_graphics("images/meadows.JPG")
+```
+
+]
+
+.footnote[Steffen *et al.*, 2015; Meadows *et al.*, 2004]
+
+---
+
+# Impact on biodiversity
+
+* **Acceleration of species extinction**: the current rate of extinction is estimated between 10s to 100s times higher than the background rate
+
+* Road to the sixth mass extinction
+
+.center[
+
+```{r, out.width="50%"}
+knitr::include_graphics("images/barnosky.JPG")
+```
+
+]
+
+.footnote[Barnosky *et al.*, 2011]
+
+---
+
+# Impact on biodiversity
+
+* **Acceleration of species extinction**: the current rate of extinction is estimated between 10s to 100s times higher than the background rate
+
+* Road to the sixth mass extinction
+
+.center[
+
+```{r, out.width="40%"}
+knitr::include_graphics("images/barnosky.JPG")
+```
+
+]
+
+* But species extinctions start with a decline in abundance, so:
+
+.center[
+
+### Is the decline of abundance accelerating?
+
+]
+
+.footnote[Barnosky *et al.*, 2011]
+
+---
+
+# What we know about abundance decline
+
+* The Living Planet Index (though controversial), estimated an average decline per species of 69%
+
+* The IPBES estimated a 20% decline
+
+* Overall bird abundance decline in North America is around 29%
+
+.pull-left[
+
+<br>
+
+```{r, out.width="150%"}
+knitr::include_graphics("images/LPI.png")
+```
+
+.footnote[Living Planet Index; Rosenberg *et al.*, 2019]
+
+]
+
+.pull-right[
+
+
+```{r, out.width="65%"}
 knitr::include_graphics("images/Rosenberg_Fig1.JPG")
 ```
 
 ]
 
-.pull-right[
-
-<br><br>
-
-```{r, out.width="150%"}
-knitr::include_graphics("images/Rosenberg_Fig2.png")
-```
-
-.footnote[
-Rosenberg *et al.*, 2019
-]
-
-]
-
-
 ---
 
-# Decomposing abundance change
+# What we know about abundance decline
 
-<br>
+* The Living Planet Index (though controversial), estimated an average decline per species of 69%
+
+* The IPBES estimated a 20% decline
+
+* Overall bird abundance decline in North America is around 29%
 
 .center[
-```{r, out.width="100%"}
-knitr::include_graphics("images/deltaN_concept1.png")
+
+<br><br>
+
+### In average this decline seems linear
+
+### Why don't we observe an acceleration of abundance decline?
+
+]
+
+.footnote[Living Planet Index; Rosenberg *et al.*, 2019]
+
+---
+
+# Acceleration and its decomposition
+
+* Change in abundance $\Delta N$ = increase or decrease
+
+* Change in yearly growth rate $\Delta g$ = acceleration or deceleration
+
+* $\Delta g$ is the difference between change in recruitment rate $\Delta r$ and loss rate $\Delta l$
+
+
+.center[
+
+```{r, out.width="60%"}
+knitr::include_graphics("images/decomposing_acceleration.png")
 ```
+
 ]
-
---
-
-<br>
-**Abundance change:**    
-$$\Delta N = N_{t1} - N_{t0} = R - L$$
-<br>
-
-$$\Leftrightarrow \Delta^2N = \Delta R - \Delta L$$
 
 ---
 
-# Decomposing growth rate
+# Acceleration and its decomposition
 
-* **Growth rate:** per individual average change in population
+* Change in abundance $\Delta N$ = increase or decrease
+
+* Change in yearly growth rate $\Delta g$ = acceleration or deceleration
+
+* $\Delta g$ is the difference between change in recruitment rate $\Delta r$ and loss rate $\Delta l$
+
+.center[
 
 <br>
 
-$$\frac{\Delta N}{N_{t0}} = \frac{R}{N_{t0}} - \frac{L}{N_{t0}}$$
-<!-- $$\Leftrightarrow \Delta Gr = \Delta (\frac{R}{N_{t0}}) - \Delta (\frac{L}{N_{t0}})$$ -->
---
+### Problem
 
-<br><br>
+A value of $\Delta g$ can be the results of infinite combinations of $\Delta r$ and $\Delta l$
 
-.pull-left[
-
-$$\big\Downarrow$$
-
-* **Recruitment rate** = individual addition of individuals
-
-$$\frac{R}{N_{t0}}$$
-
-]
-
-.pull-right[
-
-$$\big\Downarrow$$
-
-* **Loss rate** = individual probability of dying/emigrating
-
-$$\frac{L}{N_{t0}}$$
+From a conservation perspective, it is important to know which process, between $\Delta r$ and $\Delta l$, is the driving force of the temporal dynamic
 
 ]
 
@@ -118,41 +247,7 @@ $$\frac{L}{N_{t0}}$$
 
 class: inverse, center, middle
 
-## Problem
-
-$\Rightarrow$ Assessing the ongoing decrease of abundance does not tell us how loss and recruitment change through time
-
---
-
-$\Rightarrow$ Decrease in recruitment $\neq$ Increase in loss, but they both result in an acceleration of the decrease of abundance
-
---
-
-<br><br>
-
-### From a conservation perspective
-
-$\rightarrow$ measures to "bend the curve" of recruitment (*e.g.* working on reproductive sucess, protecting breeding habitat)
-
-$$\neq$$
-
-$\rightarrow$ measures to "bend the curve" of loss (*e.g.* reduction of threats, increasing habitat quality)
-
----
-
-class: inverse, center, middle
-
-## For North-American avifauna, we assessed:
-
-###  1) temporal change of abundance, recruitment and loss from 1987 and 2021 
-
---
-
-### 2) temporal change of growth rate, recruitment rate and loss rate
-
---
-
-### 3) which process (recruitment or loss) is driving temporal change of abundance
+# Methods
 
 ---
 
@@ -184,18 +279,13 @@ knitr::include_graphics("images/map_routes.jpg")
 
 ---
 
-# Model - Dail & Madsen
+# Dynamic N-mixture model
 
-.pull-left[
-* **Assess survival and recruitment from abundance data**
-]
 
-.pull-right[
-* Bayesian stacked hierarchical model
-]
-
+* **Occupancy model: assess survival and recruitment from count data**
 
 $$N_{t+1} = Survival_{t+1} + Recruitment_{t+1}$$
+
 .center[
 
 #### with
@@ -219,16 +309,20 @@ $$N^*{_t} \sim Bin(N_t, p)$$
 $\Rightarrow$ **Sky condition, wind condition, temperature** & **time of the day**
 ]
 
+<br>
+
+* One model per species. Then stacked to get the overall abundance
+
 ---
 
-# Model - Dail & Madsen
+# Dynamic N-mixture model
 
 <!-- * 1 MCMC chain (= 1 core) with 100 000 iterations $\sim$ **2 days** -->
 
 * 3 MCMC chains per species $\times$ 564 species $=$ **1692 MCMC chains**
 
 .center[
-$\Rightarrow$ **9.3 years** to fit the model using 1 core ( $\sim$ 1 year using 8 cores)
+$\Rightarrow$ **5 years** to fit the model using 1 core
 ]
 
 .pull-left[
@@ -242,12 +336,21 @@ knitr::include_graphics("images/jarzyna.1.jpg")
 ]
 
 .pull-right[
-<br><br>
-* Ohio State University
+
+<br>
+
+.center[
+
+```{r, out.width="50%"}
+knitr::include_graphics("images/ohio_su_logo.jpg")
+```
+
+]
+
 ]
 
 .center[
-$\Rightarrow$ Ohio SuperComputer to **parallelize** the learning on **1692 cores**
+$\Rightarrow$ Ohio Supercomputer Center to **parallelize** the learning on **1692 cores**
 
 ```{r}
 knitr::include_graphics("images/OSC_logo.png")
@@ -256,318 +359,180 @@ knitr::include_graphics("images/OSC_logo.png")
 
 ]
 
+---
+
+class: inverse, center, middle
+
+# Results
 
 ---
 
 # Trend in abundance
 
+* Continental decline: 96% of the route with negative $\Delta N$
+
+* Hot-spots in Texas, Florida, Delaware and New Jersey
+
+* Average decline per route of 22%
+
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/deltaN.png")
+```
+]
+
+---
+
+# Acceleration of the decline
+
+* As $\Delta N$ is mostly negative, mapping $\Delta g$ shows acceleration or deceleration of the decline
+
+* At the continental scale, no trend toward acceleration (42%) or deceleration (58%)
+
+* Hot-spots of acceleration in Midwest, California and Mid Atlantic regions
+
+.center[
+```{r, out.width="100%"}
+knitr::include_graphics("images/deltag.png")
+```
+]
+
+---
+
+# Acceleration matches human activities
+
+* Patterns of $\Delta N$ don't match human activities, but $\Delta g$ patterns do
+
+.center[
+```{r, out.width="85%"}
+knitr::include_graphics("images/humanAct.png")
+```
+]
+
+---
+
+# Decomposition of acceleration
+
+$$\Delta g = \Delta r - \Delta l$$
 --
 
 .center[
-```{r, out.width="100%"}
-knitr::include_graphics("images/map_ab.jpg")
-```
-]
-
----
-
-# Trend in number of recruited individuals
-  
-.center[
-```{r, out.width="100%"}
-knitr::include_graphics("images/map_rec.jpg")
-```
-]
-
-
----
-
-# Trend in number of lost individuals
-  
-.center[
-```{r, out.width="100%"}
-knitr::include_graphics("images/map_loss.jpg")
-```
-]
-
----
-
-# Trends in abundance, recruitment and loss
-  
-.center[
-```{r, out.width="90%"}
-knitr::include_graphics("images/map_all_number.jpg")
-```
-]
-
----
-
-# Trend in growth rate
-
-.center[
-
-```{r, out.width="100%"}
-knitr::include_graphics("images/map_gr.png")
-```
-]
-
----
-
-# Trend in recruitment rate
-
-.center[
-
-```{r, out.width="90%"}
-knitr::include_graphics("images/map_recRate.png")
-```
-]
-
----
-
-# Trend in loss rate
-
-.center[
-
-```{r, out.width="90%"}
-knitr::include_graphics("images/map_lossRate.png")
-```
-]
-
----
-
-# Trends in growth, recruitment and loss rates
-
-.center[
-
-```{r, out.width="90%"}
-knitr::include_graphics("images/map_rates_all.png")
-```
-]
-
----
-
-# Recruitment vs. Loss rates
-
-.center[
 ```{r, out.width="75%"}
-knitr::include_graphics("images/recRVsLossR1.png")
+knitr::include_graphics("images/deltar_l.png")
 ```
 ]
 
 ---
 
-# Recruitment vs. Loss rates
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recRVsLossR2.png")
-```
-]
-
----
-
-# Recruitment vs. Loss rates
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recRVsLossR3.png")
-```
-]
-
----
-
-# Recruitment vs. Loss rates
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recRVsLossR4.png")
-```
-]
-
----
-
-# Recruitment vs. Loss rates
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recRVsLossR5.png")
-```
-]
-
----
-
-# Recruitment vs. Loss rates
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recRVsLossR6.png")
-```
-]
-
----
-
-# Recruitment vs. Loss rates
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recRVsLossR7.png")
-```
-]
-
----
-
-# Recruitment vs. Loss rates
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recRVsLossR100.png")
-```
-]
-
----
-
-# Recruitment vs. Loss rates
-
-.center[
-```{r, out.width="75%"}
-knitr::include_graphics("images/recRVsLossR8.png")
-```
-]
-
----
-
-# Recruitment vs. Loss rates
+# Decomposition of acceleration
 
 .center[
 
-```{r, out.width="75%"}
-knitr::include_graphics("images/recRVsLossR9.png")
-```
-]
-
----
-
-# Recruitment rate vs. Loss rate
-
-.center[
-
-```{r, out.width="100%"}
-knitr::include_graphics("images/recRVsLossR.png")
-```
-]
-
----
-
-# Recruitment rate vs. Loss rate (smoothened)
-
-.center[
-
-```{r, out.width="90%"}
-knitr::include_graphics("images/map_recRVsLossR_gam.png")
-```
-]
-
----
-
-# Conclusion
-
-.center[
-
-$\Rightarrow$ First time decomposing changes of abundance at this continental and macroecological scale
+Map $\Delta r$ and $\Delta l$ in a $2D$ space
 
 <br>
 
-$\Rightarrow$ Mapping the ecological processes responsible for population change
-
-]
-
-.pull-left[
-
-```{r, out.width="95%"}
-knitr::include_graphics("images/recRVsLossR.png")
+```{r, out.width="100%"}
+knitr::include_graphics("images/deltar_l_space.png")
 ```
-
 ]
 
+---
 
-.pull-right[
+# Decomposition of acceleration
 
-```{r, out.width="95%"}
-knitr::include_graphics("images/map_recRVsLossR_gam.png")
+* Increase in $\Delta l$ dominates in Midwest and California
+
+* Decrease in $\Delta r$ dominates in Mid Atlantic
+
+.center[
+
+```{r, out.width="75%"}
+knitr::include_graphics("images/Fig5.jpg")
 ```
 
 ]
 
 ---
 
-# Conclusion 
+# Decomposition of acceleration
 
 .center[
 
-$\Rightarrow$ From a conservation perspective, working at the individual level is the most important
+```{r, out.width="85%"}
+knitr::include_graphics("images/Fig6.jpg")
+```
+
+]
+
+---
+
+# Take home messages
+
+<br><br>
+
+* The decline of bird is continental, with an average of 22% (in line with Rosenberg. *et al.*, 2019)
+
+* The decline is accelerating where human activities take place (Midwest, California and Mid Atlantic)
+
+* Decrease in recruitment rate is the main process in Mid Atlantic, and increase in loss rate in Midwest and California
+
+* 96% of species and 100% of families with increasing abundance are undergoing a decline in recruitment rate
+
+* Enhancing recruitment rate should be considered in conservation policies
+
+---
+
+# Caveats
+
+* **Propagation of uncertainty, from per species model, to overall abundance:**
+
+I stacked the abundance of each per species model using the mean of the posterior distributions. The uncertainty of the parameters are not propagated into the trends.
+
+--
+
+.center[
 
 <br>
 
-$\Rightarrow$ Focus must be done on bending the "right curve" (*i.e.* loss or recruitment rate)
+**Are there any experts in Bayesian statistics or occupancy models in this room?**
+
+**Please, let's have a chat! **
+
+🙏🙏🙏
 
 ]
 
-.pull-left[
+--
 
-```{r, out.width="95%"}
-knitr::include_graphics("images/recRVsLossR.png")
-```
+<br>
 
-]
-
-
-.pull-right[
-
-```{r, out.width="95%"}
-knitr::include_graphics("images/map_recRVsLossR_gam.png")
-```
-
-]
+* **Density dependence not considered:** the fact that $\Delta r$ is negative for most of the increasing species could be an artefact of the occupancy models? Accounting for density dependence may change this result?
 
 ---
 
 class: inverse, center, middle
 
-# Ackowledgements
+# Thank you for your attention
 
 .pull-left[
 `r icons::icon_style(icons::fontawesome$regular$envelope, scale = 1, fill = "white")` leroy@fzp.czu.cz
-
-.center[
-### Marta Jarzyna
-
-```{r, out.width="30%"}
-knitr::include_graphics("images/jarzyna.1.jpg")
-```
-]
-
 ]
 
 .pull-right[
 `r icons::icon_style(icons::fontawesome$brands$twitter, scale = 2, fill = "lightblue")` @FrsLry
-
-.center[
-### Petr Keil
-
-```{r, out.width="33%"}
-knitr::include_graphics("images/petr_keil.jpg")
-```
-]
 ]
 
 .center[
-
-```{r}
-knitr::include_graphics("images/ERC.JPG")
-```
-
-
+`r icons::icon_style(icons::fontawesome$brands$github, scale = 2, fill = "white")` FrsLry
 ]
+
+
+---
+
+class: inverse, center, middle
+
+# Supplementary
 
 ---
 
@@ -579,84 +544,20 @@ knitr::include_graphics("images/perSpecies_ab.png")
 
 ---
 
-# Per species change - Recruitment
+# Rate change
 
 ```{r}
-knitr::include_graphics("images/perSpecies_rec.png")
+knitr::include_graphics("images/barplot_rates.png")
 ```
 
----
-
-# Per species change - Loss
-
-```{r}
-knitr::include_graphics("images/perSpecies_loss.png")
-```
 
 ---
-
-# Per species change - Growth rate
-
-```{r}
-knitr::include_graphics("images/perSpecies_gr.png")
-```
-
----
-
-# Per species change - Recruitment rate
-
-```{r}
-knitr::include_graphics("images/perSpecies_recR.png")
-```
-
----
-
-# Per species change - Loss rate
-
-```{r}
-knitr::include_graphics("images/perSpecies_lossR.png")
-```
-
----
-
-# Rec. vs. Loss colored by ab. trend
-
-```{r}
-knitr::include_graphics("images/rec_vs_loss_colored.png")
-```
-
----
-
 
 # Rec. rate vs. Loss rate colored by growth rate
 
 ```{r}
 knitr::include_graphics("images/recR_vs_lossR_colored.png")
 ```
-
-
----
-
-# Recruitment rate vs. Loss rate in space
-
-.center[
-
-```{r, out.width="90%"}
-knitr::include_graphics("images/map_recRVsLossR.png")
-```
-]
-
----
-
-# Species' preferred habitat - Numbers
-
-<br><br>
-
-.center[
-```{r, out.width="100%"}
-knitr::include_graphics("images/barplots_number.png")
-```
-]
 
 ---
 
@@ -666,6 +567,7 @@ knitr::include_graphics("images/barplots_number.png")
 
 .center[
 ```{r, out.width="100%"}
-knitr::include_graphics("images/barplots_rate.png")
+knitr::include_graphics("images/barplot_perhabitat.png")
 ```
 ]
+
